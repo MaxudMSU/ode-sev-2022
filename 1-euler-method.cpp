@@ -5,10 +5,10 @@
 #include "diffur.h"
 
 using namespace std;
-double delta, gamma, omega;
+double delta, g, omega;
 
 double f(double t, double x, double y){
-    return x-pow(x,3)-delta*y+gamma*cos(omega*t);
+    return x-pow(x,3)-delta*y+g*cos(omega*t);
 }
 
 int main(){
@@ -17,7 +17,7 @@ int main(){
     double a=0, b; //время
     double h=0.01;
     double x0, y0;
-    omega=1;delta=0.25;gamma=0.3;
+    omega=1;delta=0.25;g=0.3;
     cout<<"Enter time value"<<endl;
     cin>>b;
     cout<<"Enter initial values: x(0) and dx/dt(0)"<<endl;
@@ -39,7 +39,7 @@ int main(){
     for(int j=1;j<=n;j++){
         draw_Line(X[j-1],Y[j-1],X[j],Y[j],GREEN);
     }
+    getch();
     closegraph;
-    system("PAUSE");
     return 0;
 }

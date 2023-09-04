@@ -26,7 +26,7 @@ int main(){
     for(int j=1;j<=n;j++){
         draw_Point_bypxl(X[j-1],Y[j-1],YELLOW);
     }
+    getch();
     closegraph;
-    system("PAUSE");
     return 0;
 }
