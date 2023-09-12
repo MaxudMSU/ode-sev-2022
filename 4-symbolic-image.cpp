@@ -3,14 +3,15 @@
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
-#include "diffur.h"
+#include "types.h"
 
 using namespace std;
 
 int main(){
     setlocale(LC_ALL, "Russian");
 
-    double x_left=-1.5, y_top=1.5, x_right=1.5, y_down=-1.5, h=0.03125, a=0.2,b=-0.2;
+    double x_left=-1, y_top=1.5, x_right=1, y_down=-1.5, h=0.5, a=0.2,b=-0.2;
+    Area area(x_left, y_top, x_right, y_down);
     int n_x, n_y, cell_num, current_cell,points_amount=50;
 
     n_x=(x_right-x_left)/h;
@@ -34,7 +35,8 @@ int main(){
             for (int j=0; j<points_amount; j++){
                 points[j] = Point(0.001*(rand()%randh +1000*x_left+h*1000*i),0.001*(rand()%randh+1000*(y_top-h)-h*1000*k));
                 points[j].julia(a,b);
-                cell_num=points[j].cell(x_left, y_top, x_right, y_down, h, n_x);
+                // cell_num=points[j].cell2(x_left, y_top, x_right, y_down, n_x, h);
+                cell_num=points[j].cell(area, n_x, h);
                 celling.M[current_cell][cell_num-1]=1;
             }
             if(current_cell<9) cout<<"  "<<current_cell+1<<" => ";
