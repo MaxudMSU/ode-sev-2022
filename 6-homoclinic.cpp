@@ -110,6 +110,7 @@ int main(){
     for(int j = 1; j < newgv2.size(); j++){
         draw_Line(newgv2[j-1].x, newgv2[j-1].y, newgv2[j].x, newgv2[j].y, GREEN);
     }
-
+    getch();
+    closegraph();
     return 0;
 }
