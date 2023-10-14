@@ -90,20 +90,20 @@ void draw_Rectangle_filled(double a, double b, double c, double d, int color){
 /*НЕОБХОДИМЫЕ КЛАССЫ*/
 
 
-    //метод для рисования области по заданному размеру ячейки
-//    void Area::set_area(double h){
-//        int hh=h*scale;
-//        int hy=2*y_top*scale;
-//        int hx=-2*x_left*scale;
-//        draw_Rectangle(x_left, y_top, x_right, y_down);
-//
-//        for(int k=0;k<=hy;k+=hh){
-//            draw_Line(x_left,y_top + k,x_right,y_top + k);
-//        }
-//        for(int j=0;j<=hx;j+=hh){
-//            line(x_left + j,y_down,x_left + j,y_down);
-//        }
-//    }
+// // метод для рисования области по заданному размеру ячейки
+// void Area::set_area(double h){
+//     int hh=h*scale;
+//     int hy=2*y_top*scale;
+//     int hx=-2*x_left*scale;
+//     draw_Rectangle(x_left, y_top, x_right, y_down);
+
+//     for(int k=0;k<=hy;k+=hh){
+//         draw_Line(x_left,y_top + k,x_right,y_top + k);
+//     }
+//     for(int j=0;j<=hx;j+=hh){
+//         line(x_left + j,y_down,x_left + j,y_down);
+//     }
+// }
     
 //метод для закрашивания ячейки области по номеру ячейки
 void Area::color_сell(int num, double h,int color){

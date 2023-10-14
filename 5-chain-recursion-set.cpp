@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <vector>
 #include <iterator>
+#include "types.h"
 #include "diffur.h"
 
 #define NIL -1
@@ -124,7 +125,7 @@ void Graph::SCCUtil(int u, int disc[], int low[], stack<int> *st, bool stackMemb
     if (low[u] == disc[u]){
         while (st->top() != u){
             w = (int) st->top();
-            wrkng.color_cell(w+1, h,RED);
+            wrkng.color_сell(w+1, h,RED);
             stackMember[w] = false;
             st->pop();
         }

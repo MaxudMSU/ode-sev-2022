@@ -10,7 +10,7 @@ using namespace std;
 int main(){
     setlocale(LC_ALL, "Russian");
 
-    double x_left=-1, y_top=1.5, x_right=1, y_down=-1.5, h=0.5, a=0.2,b=-0.2;
+    double x_left=-1, y_top=1.5, x_right=1, y_down=-1.5, h=0.0325, a=0.2,b=-0.2;
     Area area(x_left, y_top, x_right, y_down);
     int n_x, n_y, cell_num, current_cell,points_amount=50;
 
